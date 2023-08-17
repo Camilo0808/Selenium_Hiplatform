@@ -17,25 +17,19 @@ A extração e análise de dados de relatórios HSM podem ser um processo comple
 ## Como Usar
 
 1. Clone este repositório para o seu ambiente local.
-2. Instale as dependências necessárias usando o gerenciador de pacotes Python:
-
-   ```bash
-   pip install --upgrade -r requirements/prod.txt
-   ```
-
-3. Defina as credenciais de login para o site Hiplatform e para a conexão ao banco de dados relacional, no arquivo `.env`.
-4. Configure e carregue as variáveis de ambiente no arquivo 'settings.py'.
-5. Configure a conexão com o banco de dados no arquivo `connection.py`.
-6. Ajuste o caminho até o diretório que contenha o projeto, na variável project_home, no arquivo 'export_hsm_report.py'.
-7. Instale a versão do Docker compatível com o seu sistema operacional.
-8. Execute o script principal para iniciar o processo de extração e atualização:
+2. Defina as credenciais de login para o site Hiplatform e as credenciais para a conexão ao banco de dados relacional. Para isso crie o seu arquivo `.env`.
+3. Configure e carregue as variáveis de ambiente no arquivo 'settings.py'.
+4. Configure a conexão com o banco de dados no arquivo `connection.py`.
+5. Ajuste o caminho até o diretório que contenha o projeto, na variável project_home, no arquivo 'export_hsm_report.py'.
+6. Instale a versão do Docker compatível com o seu sistema operacional.
+7. Execute o script principal para iniciar o processo de extração e atualização:
 
    ```bash
    docker build -t hsm-report-app .
    docker run -it --rm hsm-report-app
    ```
 
-9. O script irá automatizar o login no site Hiplatform, extrair os dados do relatório HSM e atualizar o banco de dados com as informações mais recentes.
+8. O script irá automatizar o login no site Hiplatform, extrair os dados do relatório HSM e atualizar o banco de dados com as informações mais recentes.
 
 ## Observações
 
